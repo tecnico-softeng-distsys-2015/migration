@@ -61,7 +61,7 @@ Para terminar o servidor SD-X, deve carregar em qualquer tecla.
 #### Para correr o bubble-docs
 
 1. Abrir uma nova consola.
-2. Entrar na pasta bubble-appserver.
+2. Entrar na pasta bubbledocs-appserver.
 3. Correr testes de unidade:
 	* Correr apenas os testes de unidade locais:
 	```
