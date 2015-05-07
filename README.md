@@ -1,6 +1,7 @@
 ## Passos:
 
-* Substituir o ficheiro pom.xml na root do projecto por este ficheiro [pom.xml](https://raw.githubusercontent.com//tecnico-softeng-distsys-2015/migration/assets/pom.xml).
+* Substituir o ficheiro pom.xml na root do repositório por este ficheiro [pom.xml](https://raw.githubusercontent.com//tecnico-softeng-distsys-2015/migration/assets/pom.xml).
+* Substituir o ficheiro pom.xml na pasta bubbledocs-appserver por este ficheiro [pom.xml](https://raw.githubusercontent.com//tecnico-softeng-distsys-2015/migration/assets/bubbledocs-appserver-pom.xml).
 * Substituir o ficheiro pom.xml na pasta sd-id por este ficheiro [pom.xml](https://raw.githubusercontent.com//tecnico-softeng-distsys-2015/migration/assets/sd-id-pom.xml).
 * No ficheiro pom.xml substituido, definir nas properties, o fully classified name da classe main que correr o servidor sd-id na seguinte propriedade:
 	```
