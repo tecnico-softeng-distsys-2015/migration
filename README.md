@@ -3,17 +3,17 @@
 * Substituir o ficheiro pom.xml na root do repositório por este ficheiro [pom.xml](https://github.com/tecnico-softeng-distsys-2015/migration/raw/master/assets/pom.xml).
 * Substituir o ficheiro pom.xml na pasta bubbledocs-appserver por este ficheiro [pom.xml](https://github.com/tecnico-softeng-distsys-2015/migration/raw/master/assets/bubbledocs-appserver-pom.xml).
 * Substituir o ficheiro pom.xml na pasta sd-id por este ficheiro [pom.xml](https://github.com/tecnico-softeng-distsys-2015/migration/raw/master/assets/sd-id-pom.xml).
-* No ficheiro pom.xml substituido, definir nas properties, o fully classified name da classe main que correr o servidor sd-id na seguinte propriedade:
+* No ficheiro pom.xml substituido, definir nas properties, o fully classified name da classe main que corre o servidor sd-id na seguinte propriedade:
 ```
-<main.exec.classname></main.exec.classname>
+<main.exec.classname> </main.exec.classname>
 ```
 * Substituir o ficheiro pom.xml na pasta sd-store por este ficheiro [pom.xml](https://github.com/tecnico-softeng-distsys-2015/migration/raw/master/assets/sd-store-pom.xml).
-* No ficheiro pom.xml substituido, definir nas properties, o fully classified name da classe main que correr o servidor sd-store na seguinte propriedade:
+* No ficheiro pom.xml substituido, definir nas properties, o fully classified name da classe main que corre o servidor sd-store na seguinte propriedade:
 ```
-<main.exec.classname></main.exec.classname>
+<main.exec.classname> </main.exec.classname>
 ```
 * Substituir o ficheiro pom.xml na pasta sd-id-cli por este ficheiro [pom.xml](https://github.com/tecnico-softeng-distsys-2015/migration/raw/master/assets/sd-id-cli-pom.xml).
-* No ficheiro pom.xml substituido, definir nas properties, o fully classified name da classe main que correr o cliente sd-id-cli na seguinte propriedade:
+* No ficheiro pom.xml substituído, definir nas properties, o fully classified name da classe main que corre o cliente sd-id-cli na seguinte propriedade:
 ```
 <main.exec.classname></main.exec.classname>
 ```
