@@ -1,3 +1,22 @@
+## Disclaimer
+
+Este guia visa ajudar os alunos de ES+SD a configurar a integração entre os projectos de ambas as cadeiras. Neste guia, são enunciados passos que assumem que não houve definições de novos módulos e respectivas dependências dos restantes módulos. Ou seja, caso o grupo tenha definido um novo módulo e colocado o mesmo como dependência de outro, então ao seguir o passo de alteração da pom que contém essa dependência, a mesma deve ser adicionada à pom fornecida neste guia. O mesmo se aplica a dependências de bibliotecas externas (jodatime, jdom2, etc...).
+
+Caso existam módulos adicionais criados pelos alunos, a parent pom (ficheiro pom que está na root do projecto) no final do guia, deve ser também alterada no elemento `modules`, onde devem indicar a pasta desse módulo, para que este seja considerado na instalação. O maven irá calcular o grafo de dependências e compilar e instalar as dependências primeiro.
+
+Caso tenham problemas com o guia, devem contactar o corpo docente via email, e/ou aparecer num horário de dúvidas para garantir que a migração foi feita sem problemas.
+
+
+## Racional da Migração
+
+O projecto de ES+SD é constituído por diversos módulos, em que alguns deles dependem uns dos outros (ex: bubbledocs-appserver depende dos clientes de SD-ID e SD-STORE). Este guia visa ajudar os alunos na configuração do projecto para que sua codebase esteja enquadrada com a ferramenta maven. Desta forma, os alunos podem executar:
+
+### Testes Unitários
+Testes unitários são aqueles que correm sempre localmente no módulo onde pertencem, ou seja, todas as entidades externas que seja necessário invocar deverão ser mocked. Estes testes devem ser colocados em qualquer package do directório `src/test/java` e terminarem o filename do teste com `Test.java`. Quando o comando `mvn clean test` é executado, o maven irá correr apenas esses testes, não sendo necessário nenhum serviço externo estar a correr, pois são apenas usados mocks dos mesmos.
+
+### Testes de Integração
+Outro tipos de testes são aqueles que necessitam de um servidor externo a correr. Esses testes chama-se testes de integração e devem ser também colocados em qualquer package dentro de `src/test/java`, terminando o filename do teste com `IT.java`. Quando for invocado o comando `mvn clean verify` a configuração fornecida neste guia vai correr esses testes, tendo os alunos que garantir que todos os serviços externos (ex: UDDI-server, SD-ID, SD-Store) estejam a correr.
+
 ## Passos:
 
 * Substituir o ficheiro pom.xml na root do repositório por este ficheiro [pom.xml](https://github.com/tecnico-softeng-distsys-2015/migration/raw/master/assets/pom.xml).
