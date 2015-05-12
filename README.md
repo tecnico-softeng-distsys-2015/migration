@@ -58,7 +58,7 @@ Outro tipos de testes são aqueles que necessitam de um servidor externo a corre
 	* README.md
 * Instala os projectos localmente correndo o seguinte comando na root do repositório:
 ```
-mvn clean install -DskipTests
+mvn clean install -Dmaven.test.skip=true
 ```
 
 
