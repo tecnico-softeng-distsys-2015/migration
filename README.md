@@ -118,3 +118,13 @@ Para terminar o servidor SD-X, deve carregar em qualquer tecla.
 	```
 	mvn clean verify
 	```
+	
+### Como adicionar as classes geradas pelo wsimport ao eclipse
+Quem tiver problemas em que o eclipse não está a reconhecer as classes geradas pelo wsimport deverá seguir os seguintes passos para as adicionar ao classpath.
+
+ 1. Ir às propriedades do projecto
+ 2. Em 'Java Build Path', na tab 'Sources', carregar em 'Add Folder...'
+ 3. Seleccionar a pasta que tem as source geradas, p.e. 'target/generated-sources/wsimport' e carregar ok
+ 4. Repetir os passos 1-3  para todos os projectos que tenham classes auto geradas
+
+Nota estes passos vão alterar o .classpath do projecto, pelo que que será necessário que cada elemento do grupo os faça na sua máquina.
